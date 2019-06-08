@@ -1,13 +1,13 @@
 from abc import abstractmethod
 from typing import List
-import requests
+from urllib import request
 
 class CrawlerBase:
 
     def __init__(self, urls: List[str], parser: any):
         self.urls = urls
-        self.requests = requests
-        self.html_parser = parser
+        self.requests = request
+        self.parser = parser
     
     @abstractmethod
     def activate(self):
